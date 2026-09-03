@@ -151,30 +151,7 @@ a:focus-visible {
   font-weight: 600;
 }
 
-.interest-list {
-  display: grid;
-  gap: 13px;
-  margin: 0;
-}
-
-.interest-list > div {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  gap: 18px;
-}
-
-.interest-list dt {
-  color: #30373b;
-  font-weight: 600;
-}
-
-.interest-list dd {
-  margin: 0;
-  color: var(--muted);
-}
-
 .publication-item > time,
-.experience-item > time,
 .education-list time {
   color: var(--muted);
   font-size: 0.84rem;
@@ -194,7 +171,6 @@ a:focus-visible {
 }
 
 .publication-item h3,
-.experience-item h3,
 .education-list h3 {
   margin: 0;
   color: #2e3438;
@@ -226,30 +202,6 @@ a:focus-visible {
   font-style: italic;
 }
 
-.experience-list {
-  display: grid;
-  gap: 24px;
-}
-
-.experience-item {
-  display: grid;
-  grid-template-columns: 130px minmax(0, 1fr);
-  gap: 18px;
-}
-
-.experience-item p {
-  margin: 5px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.58;
-}
-
-.experience-item .experience-focus {
-  color: #4f5960;
-  font-size: 0.88rem;
-  font-style: italic;
-}
-
 .education-list {
   display: grid;
   gap: 18px;
@@ -265,28 +217,6 @@ a:focus-visible {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 0.92rem;
-}
-
-.skill-list {
-  display: grid;
-  gap: 9px;
-  margin: 0;
-}
-
-.skill-list > div {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 18px;
-}
-
-.skill-list dt {
-  color: #30373b;
-  font-weight: 600;
-}
-
-.skill-list dd {
-  margin: 0;
-  color: var(--muted);
 }
 
 .site-footer {
@@ -351,9 +281,6 @@ a:focus-visible {
     margin-bottom: 36px;
   }
 
-  .interest-list > div,
-  .experience-item,
-  .skill-list > div,
   .education-list article {
     grid-template-columns: 1fr;
     gap: 2px;
