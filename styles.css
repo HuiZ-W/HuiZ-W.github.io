@@ -70,23 +70,15 @@ a:focus-visible {
   text-align: center;
 }
 
-.portrait-placeholder {
-  display: grid;
-  place-items: center;
-  width: 132px;
-  aspect-ratio: 1;
+.profile-portrait {
+  display: block;
+  width: 148px;
+  aspect-ratio: 4 / 5;
   margin: 0 auto 22px;
-  overflow: hidden;
   border: 1px solid #dce4e8;
-  border-radius: 50%;
-  background: var(--soft-blue);
-}
-
-.portrait-placeholder span {
-  color: #597487;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-  letter-spacing: 0.02em;
+  border-radius: 7px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile-copy h1 {
@@ -246,7 +238,7 @@ a:focus-visible {
     text-align: left;
   }
 
-  .portrait-placeholder {
+  .profile-portrait {
     width: 124px;
     margin: 0;
   }
@@ -268,7 +260,7 @@ a:focus-visible {
     text-align: center;
   }
 
-  .portrait-placeholder {
+  .profile-portrait {
     width: 112px;
     margin-inline: auto;
   }
