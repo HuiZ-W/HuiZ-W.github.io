@@ -72,11 +72,11 @@ a:focus-visible {
 
 .profile-portrait {
   display: block;
-  width: 148px;
+  width: 116px;
   aspect-ratio: 4 / 5;
-  margin: 0 auto 22px;
+  margin: 0 auto 16px;
   border: 1px solid #dce4e8;
-  border-radius: 7px;
+  border-radius: 5px;
   object-fit: cover;
   object-position: center;
 }
@@ -239,7 +239,7 @@ a:focus-visible {
   }
 
   .profile-portrait {
-    width: 124px;
+    width: 106px;
     margin: 0;
   }
 
@@ -261,7 +261,7 @@ a:focus-visible {
   }
 
   .profile-portrait {
-    width: 112px;
+    width: 96px;
     margin-inline: auto;
   }
 
