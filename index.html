@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <title>Huizhong Wang — Academic Homepage</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261124-links" />
   </head>
   <body>
     <main class="academic-page">
@@ -38,13 +38,19 @@
               Université Claude Bernard Lyon 1<br />
               Lyon, France
             </p>
-            
+
             <nav class="profile-links" aria-label="Academic links">
-              <a href="mailto:huizhong.wang@univ-lyon1.fr">Email</a>
-              <span aria-hidden="true">·</span>
-              <a href="https://github.com/HuiZ-W" rel="me">GitHub</a>
-              <span aria-hidden="true">·</span>
-              <a href="#publications">Publications</a>
+              <a href="mailto:huizhong.wang@univ-lyon1.fr">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2.5" y="5" width="19" height="14" rx="2"/>
+                  <path d="m3 6 9 7 9-7"/>
+                </svg>Email
+              </a>
+              <a href="https://github.com/HuiZ-W" rel="me">
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+                  <path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.39v-1.49c-2.23.48-2.7-1.08-2.7-1.08-.36-.92-.89-1.16-.89-1.16-.73-.5.05-.49.05-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.88 2.34.67.07-.52.28-.88.51-1.08-1.78-.2-3.65-.89-3.65-3.96 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82A7.7 7.7 0 0 1 8 3.72c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.08-1.88 3.76-3.67 3.96.29.25.55.74.55 1.49v2.31c0 .22.15.46.55.39A8 8 0 0 0 8 0Z"/>
+                </svg>GitHub
+              </a>
             </nav>
           </div>
         </aside>
@@ -75,93 +81,39 @@
                 GO-Y</a
               >
               (<em>Unifying Graph Databases and Causal Models</em>). My current
-              research focuses on graph data management and causality-driven graph 
+              research focuses on graph data management and causality-driven graph
               databases.
+            </p>
+            <p id="education">
+              Before starting my PhD, I earned an MPhil in Computer Science at The Chinese
+              University of Hong Kong, Shenzhen in 2026 under the supervision of Prof. Chenhao Ma.
+              I received my B.S. in Computer Science and Technology from Beijing University of
+              Posts and Telecommunications in 2024, where I worked with Prof. Jing Wang.
             </p>
           </section>
 
           <section id="publications" aria-labelledby="publications-title">
             <h2 id="publications-title">Publications</h2>
-            <div class="publication-list">
-              <article class="publication-item">
-                <time datetime="2026">2026</time>
-                <div>
-                  <h3>
-                    <a href="https://doi.org/10.1145/3786695">
-                      Scalable Privacy-Preserving Shortest Path Distance
-                      Computation via 2-Hop Labeling in MPC
-                    </a>
-                  </h3>
-                  <p class="publication-authors">
-                    <strong>Huizhong Wang</strong>, Yuanyuan Zeng, Kun Chen,
-                    Wei Dong, Chenhao Ma
-                  </p>
-                  <p class="publication-venue">
-                    Proceedings of the ACM on Management of Data (PACMMOD),
-                    4(1), Article 81 · SIGMOD 2026
-                  </p>
-                </div>
-              </article>
-              <article class="publication-item">
-                <time datetime="2026">2026</time>
-                <div>
-                  <h3>
-                    <a href="https://doi.org/10.14778/3797919.3797930">
-                      A Semantics-aware Approach for Graph Edit Distance
-                      Estimation over Knowledge Graphs
-                    </a>
-                  </h3>
-                  <p class="publication-authors">
-                    Yingli Zhou, <strong>Huizhong Wang</strong>, Chenhao Ma,
-                    Yixiang Fang
-                  </p>
-                  <p class="publication-venue">
-                    Proceedings of the VLDB Endowment (PVLDB), 19(6):
-                    1226–1239, 2026
-                  </p>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section id="education" aria-labelledby="education-title">
-            <h2 id="education-title">Education</h2>
-            <div class="education-list">
-              <article>
-                <time>2026 – present</time>
-                <div>
-                  <h3>PhD in Computer Science</h3>
-                  <p>
-                    Université Claude Bernard Lyon 1 · LIRIS, CNRS · Advisor:
-                    Prof. Angela Bonifati · ERC Advanced Grant GO-Y
-                  </p>
-                </div>
-              </article>
-              <article>
-                <time>2024 – 2026</time>
-                <div>
-                  <h3>MPhil in Computer Science</h3>
-                  <p>
-                    The Chinese University of Hong Kong, Shenzhen · Supervisor:
-                    Prof. Chenhao Ma
-                  </p>
-                </div>
-              </article>
-              <article>
-                <time>2020 – 2024</time>
-                <div>
-                  <h3>B.S. in Computer Science and Technology</h3>
-                  <p>
-                    Beijing University of Posts and Telecommunications ·
-                    Supervisor: Prof. Jing Wang
-                  </p>
-                </div>
-              </article>
-            </div>
+            <ul class="publication-list" role="list">
+              <li>
+                <span class="citation-label">[SIGMOD 2026]</span>
+                <strong>H. Wang</strong>, Y. Zeng, K. Chen, W. Dong, and C. Ma.
+                “<a href="https://doi.org/10.1145/3786695">Scalable Privacy-Preserving Shortest
+                Path Distance Computation via 2-Hop Labeling in MPC</a>.”
+                <em>Proceedings of the ACM on Management of Data</em>, 4(1), Article 81.
+              </li>
+              <li>
+                <span class="citation-label">[PVLDB 2026]</span>
+                Y. Zhou, <strong>H. Wang</strong>, C. Ma, and Y. Fang.
+                “<a href="https://doi.org/10.14778/3797919.3797930">A Semantics-aware Approach
+                for Graph Edit Distance Estimation over Knowledge Graphs</a>.”
+                <em>Proceedings of the VLDB Endowment</em>, 19(6), 1226–1239.
+              </li>
+            </ul>
           </section>
 
           <footer class="site-footer">
-            <span>Last updated September 2026</span>
+            <span>Last updated November 2026</span>
             <span>
               Layout based on
               <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a>.
