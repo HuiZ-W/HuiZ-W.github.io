@@ -8,6 +8,8 @@
   --link-hover: #14587e;
   --line: #e2e7ea;
   --soft-blue: #eef4f7;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+  --sans: system-ui, "Segoe UI", sans-serif;
 }
 
 * {
@@ -22,11 +24,9 @@ body {
   margin: 0;
   background: var(--page);
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -57,7 +57,7 @@ a:focus-visible {
 .academic-shell {
   display: grid;
   grid-template-columns: 220px minmax(0, 650px);
-  gap: 70px;
+  gap: 64px;
   width: min(100% - 48px, 940px);
   margin: 0 auto;
   padding: 64px 0 52px;
@@ -73,6 +73,7 @@ a:focus-visible {
 .profile-portrait {
   display: block;
   width: 116px;
+  height: auto;
   aspect-ratio: 4 / 5;
   margin: 0 auto 16px;
   border: 1px solid #dce4e8;
@@ -84,9 +85,10 @@ a:focus-visible {
 .profile-copy h1 {
   margin: 0;
   color: var(--heading);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-family: var(--serif);
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -.025em;
   line-height: 1.2;
 }
 
@@ -108,10 +110,22 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0 0.42rem;
+  gap: 3px 10px;
   margin-top: 15px;
-  color: #9ba2a7;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 24px;
+}
+
+.profile-links svg {
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
 }
 
 .content-column {
@@ -119,7 +133,7 @@ a:focus-visible {
 }
 
 .content-column section {
-  margin-bottom: 42px;
+  margin-bottom: 38px;
   scroll-margin-top: 28px;
 }
 
@@ -128,14 +142,19 @@ a:focus-visible {
   padding-bottom: 7px;
   border-bottom: 1px solid var(--line);
   color: var(--heading);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.48rem;
-  font-weight: 500;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -.015em;
   line-height: 1.25;
 }
 
 .content-column p {
   margin: 0 0 15px;
+  max-width: 70ch;
+  font-family: var(--serif);
+  font-size: clamp(1.0625rem, 1rem + .2vw, 1.125rem);
+  line-height: 1.55;
 }
 
 .content-column strong {
@@ -143,76 +162,37 @@ a:focus-visible {
   font-weight: 600;
 }
 
-.publication-item > time,
-.education-list time {
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-variant-numeric: tabular-nums;
-}
-
 .publication-list {
   display: grid;
-}
-
-.publication-item {
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 18px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.publication-item h3,
-.education-list h3 {
+  gap: 14px;
   margin: 0;
-  color: #2e3438;
-  font-size: 1rem;
+  padding: 0;
+  list-style: none;
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.citation-label {
+  font-family: var(--sans);
+  font-size: .84em;
   font-weight: 600;
-  line-height: 1.5;
+  color: var(--heading);
+  white-space: nowrap;
 }
 
-.publication-item h3 a {
-  color: inherit;
+.publication-list a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-decoration-thickness: 1px;
 }
 
-.publication-item h3 a:hover {
-  color: var(--link-hover);
-}
-
-.publication-item p {
-  margin: 4px 0 0;
-  font-size: 0.91rem;
-  line-height: 1.5;
-}
-
-.publication-authors {
-  color: #4e565b;
-}
-
-.publication-venue {
-  color: var(--muted);
-  font-style: italic;
-}
-
-.education-list {
-  display: grid;
-  gap: 18px;
-}
-
-.education-list article {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 18px;
-}
-
-.education-list p {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
+.publication-list a:hover { text-decoration-color: currentColor; }
 
 .site-footer {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
   padding-top: 18px;
@@ -251,7 +231,8 @@ a:focus-visible {
 @media (max-width: 520px) {
   .academic-shell {
     width: min(100% - 32px, 650px);
-    padding-top: 32px;
+    padding-top: 24px;
+    gap: 30px;
   }
 
   .profile-sidebar {
@@ -261,7 +242,7 @@ a:focus-visible {
   }
 
   .profile-portrait {
-    width: 96px;
+    width: 72px;
     margin-inline: auto;
   }
 
@@ -271,16 +252,6 @@ a:focus-visible {
 
   .content-column section {
     margin-bottom: 36px;
-  }
-
-  .education-list article {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-
-  .publication-item {
-    grid-template-columns: 40px minmax(0, 1fr);
-    gap: 12px;
   }
 
   .site-footer {
